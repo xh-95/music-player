@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/list"
+        android:title="@string/playinglist"/>
+    <item
+        android:id="@+id/song"
+        android:title="@string/song"/>
+    <item
+        android:id="@+id/album"
+        android:title="@string/album"/>
+    <item
+        android:id="@+id/singer"
+        android:title="@string/singer"/>
+
+</menu>

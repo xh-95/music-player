@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="playinglist_padding">15dp</dimen>
+    <dimen name="MyListText">15dp</dimen>
+    <dimen name="Create_Play_List">15dp</dimen>
+    <dimen name="Dialog_EditText">20dp</dimen>
+</resources>
