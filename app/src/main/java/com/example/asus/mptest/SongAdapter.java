@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by ASUS on 2016/8/14.
+ * 显示Song信息的适配器
  */
 public class SongAdapter extends ArrayAdapter<Song> {
 

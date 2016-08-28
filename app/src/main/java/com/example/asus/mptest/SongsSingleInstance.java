@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/15.
+ * 单例类，获取本地媒体库中所有的音乐
  */
 public class SongsSingleInstance {
     private static ArrayList<Song> songs=null;

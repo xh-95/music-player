@@ -2,6 +2,7 @@ package com.example.asus.mptest;
 
 /**
  * Created by ASUS on 2016/8/12.
+ * 用来描述音乐信息的类
  */
 public class Song {
 

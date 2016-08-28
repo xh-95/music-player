@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 /**
  * Created by ASUS on 2016/8/9.
+ * 自定义控件，切换碎片使用
  */
 public class ListButton extends LinearLayout {
 

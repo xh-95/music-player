@@ -38,6 +38,7 @@ import java.util.TimerTask;
 
 /**
  * Created by ASUS on 2016/8/20.
+ * 播放界面Activity，包含显示专辑封面、播放控制和添加收藏等效果
  */
 public class PlayActivity extends Activity {
 
@@ -64,7 +65,9 @@ public class PlayActivity extends Activity {
     private Handler handler;
     private static final int CHANGE_CURRENT_TIME=0;
 
-
+    /**
+     *回调函数，包括各音乐控制和进度条等控件的事件响应，以及设置TimeTask来同步更新进度条和当前时间
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -74,12 +77,7 @@ public class PlayActivity extends Activity {
         Intent intent=getIntent();
         bundle=intent.getExtras();
 
-
         playBinder=MyApplication.getBinder();
-
-
-
-
 
         backup=(Button) findViewById(R.id.backup);
         backup.setOnClickListener(new View.OnClickListener() {
@@ -289,11 +287,15 @@ public class PlayActivity extends Activity {
 
 
     }
-
+    /**
+     *获取list_name
+     */
     public static String getListName(){
         return list_name;
     }
-
+    /**
+     *根据参数信息设置当前播放音乐相关的播放界面
+     */
     public void setLayout(int requestCode, String songPath, String song_name, String song_singer){
         Bitmap abitmap,bbitmap,albumBitmap;;
         albumBitmap=GetSong.createAlbumArt(songPath);
@@ -336,7 +338,9 @@ public class PlayActivity extends Activity {
         super.onDestroy();
         //unbindService(connection);
     }
-
+    /**
+     *传入专辑封面并获取圆形的封面Bitmap
+     */
     public static Bitmap makeRoundCorner(Bitmap bitmap)
     {
         int width = bitmap.getWidth();

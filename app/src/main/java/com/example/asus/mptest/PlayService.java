@@ -19,6 +19,7 @@ import java.util.TimerTask;
 
 /**
  * Created by ASUS on 2016/8/21.
+ * 音乐播放控制Service
  */
 public class PlayService extends Service {
 
@@ -38,6 +39,7 @@ public class PlayService extends Service {
     private SQLiteDatabase db;
 
     class PlayBinder extends Binder{
+        //向MediaPlayer设置播放文件数据
         public void setData(String filePath){
             currentSongPath=filePath;
             Bundle bundle=new Bundle();
@@ -48,6 +50,7 @@ public class PlayService extends Service {
             handler.sendMessage(message);
 
         }
+        //开始播放
         public void startPlay(){
             message=new Message();
             message.what=START;
@@ -82,22 +85,26 @@ public class PlayService extends Service {
             pcursor.close();
 
         }
+        //暂停播放
         public void pausePlay(){
             message=new Message();
             message.what=PAUSE;
             handler.sendMessage(message);
         }
+        //重置MediaPlayer对象
         public void resetPlay(){
             message=new Message();
             message.what=RESET;
             handler.sendMessage(message);
         }
+        //获取播放状态
         public boolean getIsPlaying(){
             if(mediaPlayer.isPlaying())
                 return true;
             else
                 return false;
         }
+        //获取当前播放位置
         public int getCurrentPosition(){
             return mediaPlayer.getCurrentPosition();
         }
@@ -134,6 +141,7 @@ public class PlayService extends Service {
         mediaPlayer.release();
     }
 
+    //音乐的播放于子线程中实现
     class mediaPlay implements Runnable{
         @Override
         public void run() {

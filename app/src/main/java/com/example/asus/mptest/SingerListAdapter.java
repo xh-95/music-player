@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * SingerFragment中的ListView的适配器
  */
 public class SingerListAdapter extends ArrayAdapter<String> {
     private Context mcontext;

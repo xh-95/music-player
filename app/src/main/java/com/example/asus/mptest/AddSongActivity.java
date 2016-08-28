@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/23.
+ * 创建播放列表并添加歌曲的Activity
  */
 public class AddSongActivity extends Activity {
 
@@ -30,7 +31,9 @@ public class AddSongActivity extends Activity {
     private String sname[];
 
     private ArrayList<String> songnames;
-
+    /**
+     *回调函数，显示所有歌曲，并设置按钮响应事件
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

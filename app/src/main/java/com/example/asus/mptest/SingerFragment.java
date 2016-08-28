@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * 按歌手划分歌曲的Fragment
  */
 public class SingerFragment extends Fragment {
     private ArrayList<Song> songs;

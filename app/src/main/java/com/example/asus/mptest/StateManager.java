@@ -2,6 +2,7 @@ package com.example.asus.mptest;
 
 /**
  * Created by ASUS on 2016/8/21.
+ * 测试用
  */
 public class StateManager {
     private static final int PLAYING_STATE = 0;

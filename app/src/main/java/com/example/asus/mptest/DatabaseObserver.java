@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * 数据库观察者，当某事件发生时执行相应动作
  */
 public class DatabaseObserver {
     public static void DataChanged(String tableName, String itemName, SQLiteDatabase db){

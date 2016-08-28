@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 /**
  * Created by ASUS on 2016/8/24.
+ * 删除播放列表的Activity
  */
 public class DeleteListActivity extends Activity {
 
@@ -25,6 +26,9 @@ public class DeleteListActivity extends Activity {
     private Button back,delete_back;
     private String [] list_table_name,list_Chinese_name,listTableArray;
 
+    /**
+     *回调函数，初始化Activity，显示可删除列表，即用户所创建播放列表
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

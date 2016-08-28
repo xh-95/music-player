@@ -36,7 +36,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ * 主Activity，包含顶端功能条，中部Fragment，底部简化控制布局
+ */
 public class MainActivity extends Activity {
 
     private PopupMenu popup;
@@ -59,7 +61,9 @@ public class MainActivity extends Activity {
     private PlayService.PlayBinder playBinder;
 
     //private ArrayList<SongsList> songsLists;
-
+    /**
+     *回调函数，获取SQLite操作对象，调用数据库初始化函数，设置顶部功能区各控件的响应事件
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -176,6 +180,9 @@ public class MainActivity extends Activity {
 
     }
 
+    /**
+     *回调函数，设置主Activity底部控制布局中各控件的事件响应
+     */
     @Override
     protected void onResume(){
         super.onResume();
@@ -306,6 +313,9 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     *实现弹出菜单，点击选项切换相应Fragment
+     */
     public void onPopupButtonClick(View button){
         popup=new PopupMenu(this,button);
         getMenuInflater().inflate(R.menu.first_popup_menu,popup.getMenu());
@@ -354,6 +364,9 @@ public class MainActivity extends Activity {
         popup.show();
     }
 
+    /**
+     *数据库初始化函数，应用安装时初始化默认播放列表数据
+     */
     public void Initialization(Context context,SQLiteDatabase db){
         ContentValues values=new ContentValues();
         values.put("list_table_name","recentlyAdd_list");
@@ -361,11 +374,6 @@ public class MainActivity extends Activity {
         values.put("list_Chinese_name","最近添加");
         db.insert("list_info",null,values);
         values.clear();
-        /*values.put("list_table_name","recentlyPlay_list");
-        values.put("list_size",0);
-        values.put("list_Chinese_name","最近播放");
-        db.insert("list_info",null,values);
-        values.clear();*/
         values.put("list_table_name","frequentlyPlay_list");
         values.put("list_size",0);
         values.put("list_Chinese_name","最常播放");
@@ -376,7 +384,6 @@ public class MainActivity extends Activity {
         values.put("list_Chinese_name","收藏曲目");
         db.insert("list_info",null,values);
         values.clear();
-        Toast.makeText(this,"insert succeeded",Toast.LENGTH_SHORT).show();
 
         ArrayList<Song> arrList=GetSong.getAllSongs(this);
         Iterator<Song> it=arrList.iterator();

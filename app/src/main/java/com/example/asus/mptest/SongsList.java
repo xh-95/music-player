@@ -2,6 +2,7 @@ package com.example.asus.mptest;
 
 /**
  * Created by ASUS on 2016/8/16.
+ * 描述播放列表的类
  */
 public class SongsList {
     private String listName;

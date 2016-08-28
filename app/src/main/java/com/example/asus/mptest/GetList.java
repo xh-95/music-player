@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/16.
+ * 获取所有播放列表
  */
 public class GetList {
     public static ArrayList<SongsList> getAllList(Context context, SQLiteDatabase db){

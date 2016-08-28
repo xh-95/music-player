@@ -13,6 +13,7 @@ import java.util.TimerTask;
 
 /**
  * Created by ASUS on 2016/8/22.
+ * 自定义Application，添加获取Context方法和绑定PlayService
  */
 public class MyApplication extends Application {
     private static Context context;

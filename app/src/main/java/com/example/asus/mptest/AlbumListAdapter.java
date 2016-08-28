@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * 按专辑分Fragment中的ListView的适配器
  */
 public class AlbumListAdapter extends ArrayAdapter<String> {
     private Context mcontext;

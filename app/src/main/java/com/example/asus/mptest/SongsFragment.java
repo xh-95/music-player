@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * 显示所有音乐的Fragment
  */
 public class SongsFragment extends Fragment {
 

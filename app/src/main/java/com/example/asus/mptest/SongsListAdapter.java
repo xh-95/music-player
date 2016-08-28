@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by ASUS on 2016/8/16.
+ * 音乐列表的适配器
  */
 public class SongsListAdapter extends ArrayAdapter<SongsList> {
     private int resourceId;

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 /**
  * Created by ASUS on 2016/8/17.
+ * 自定义控件，用作创建新的播放列表
  */
 public class AddButton extends LinearLayout{
     private Context mcontext;

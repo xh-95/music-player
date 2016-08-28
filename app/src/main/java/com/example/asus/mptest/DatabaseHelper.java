@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 /**
  * Created by ASUS on 2016/8/15.
+ * SQLiteOpenHelper的实现，供应用访问数据库时使用
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     private Context mContext;

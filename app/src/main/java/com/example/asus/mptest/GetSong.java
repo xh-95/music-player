@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/12.
+ * 获取媒体库所有音乐文件信息
  */
 public class GetSong {
 

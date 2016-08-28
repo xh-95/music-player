@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2016/8/18.
+ * 按专辑分类歌曲的Fragment，将所有歌曲分至对应专辑的相应列表
  */
 public class AlbumFragment extends Fragment {
 
